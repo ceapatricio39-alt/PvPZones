@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ZoneCommands {
+    //crear zonita
 
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(
@@ -37,6 +38,8 @@ public class ZoneCommands {
                 )
         );
 
+        //remover zonilla
+
         dispatcher.register(
             Commands.literal("pvpzonesremove")
                 .requires(source -> source.hasPermission(4))
@@ -58,6 +61,8 @@ public class ZoneCommands {
                     })
                 )
         );
+
+        //Ver zonas
 
         dispatcher.register(
             Commands.literal("pvpzones")
